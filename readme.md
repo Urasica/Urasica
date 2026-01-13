@@ -1,4 +1,4 @@
-#Eunjung's Github Profile
+# Eunjung's Github Profile
 ---
 **안정적이고 지속 가능한 시스템 구조를 고민하는 경험을 쌓아온 백엔드 개발자입니다.**
 
