@@ -10,21 +10,21 @@
 ## 기술 스택
 
 ### Backend & Languages
-![Java](https://img.shields.io/badge/Java_17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot_3.x-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JPA](https://img.shields.io/badge/Spring_Data_JPA-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Java](https://img.shields.io/badge/Java_17-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot_3.x-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![JPA](https://img.shields.io/badge/Spring_Data_JPA-6DB33F?style=flat-square&logo=spring&logoColor=white)
 
 ### Infrastructure & Database
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 
 ### Tools & Collaboration
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=flat-square&logo=swagger&logoColor=black)
 
 ---
 
@@ -43,7 +43,7 @@
 <br>
 
 ### 2. 한컷여행 (여행 경로 추천 및 공유 서비스)
-**`(3명) Team Leader`** | **`2025.07 ~ 2025.09`** 한국관광공사 Open API를 활용하여 맞춤형 여행 경로를 생성하고 공유하는 플랫폼입니다.
+**`팀장 (3인)`** | **`2025.07 ~ 2025.09`** 한국관광공사 Open API를 활용하여 맞춤형 여행 경로를 생성하고 공유하는 플랫폼입니다.
 
 ![사진_한컷여행_메인화면_이미지](./images/OneCutTrip.png)
 
@@ -56,7 +56,7 @@
 <br>
 
 ### 3. 위드유 (AI 활용 주식 모의투자 플랫폼)
-**`(4명) Team Leader`** | **`2025.03 ~ 2025.06`** 실시간 주식 시세 API와 AI 챗봇을 결합한 모의투자 서비스입니다.
+**`팀장 (4인)`** | **`2025.03 ~ 2025.06`** 실시간 주식 시세 API와 AI 챗봇을 결합한 모의투자 서비스입니다.
 
 ![사진_위드유_화면](./images/WithYou.png)
 
@@ -67,16 +67,3 @@
     * **AI 챗봇 파이프라인**: LLM이 JSON 포맷으로 의도(Intent)를 반환하도록 프롬프트 엔지니어링 수행, 내부 API와 연동하여 실시간 주가 정보를 답변하도록 구현
 
 ---
-
-## GitHub Analytics
-
-<div align="center">
-  <a href="https://github.com/Urasica">
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FUrasica&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
-  </a>
-  <br><br>
-
-  <img src="https://github-readme-stats.vercel.app/api?username=Urasica&show_icons=true&theme=radical&bg_color=151515&title_color=E94560&text_color=ffffff&v=1" height="150" alt="stats" />
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Urasica&layout=compact&theme=radical&bg_color=151515&title_color=E94560&text_color=ffffff&v=1" height="150" alt="languages" />
-</div>
