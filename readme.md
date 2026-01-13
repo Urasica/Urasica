@@ -1,12 +1,12 @@
-#Eunjung's Github Profile
----
+# Eunjung's Github Profile
+
 **안정적이고 지속 가능한 시스템 구조를 고민하는 경험을 쌓아온 백엔드 개발자입니다.**
 
 [![Email](https://img.shields.io/badge/Email-Contact_Me-O?style=flat-square&logo=gmail&logoColor=white)](mailto:dlqnfdl2610@naver.com)
 
 ---
 
-## 🛠️ 기술 스택
+## 기술 스택
 
 ### Backend & Languages
 ![Java](https://img.shields.io/badge/Java_17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -67,18 +67,15 @@
 
 ---
 
-## 📈 GitHub Analytics
+## GitHub Analytics
 
 <div align="center">
   <a href="https://github.com/Urasica">
     <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FUrasica&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
   </a>
-
   <br><br>
 
-  <img src="https://github-readme-stats.vercel.app/api?username=Urasica&show_icons=true&theme=radical&bg_color=151515&title_color=E94560&text_color=ffffff" height="150" alt="stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Urasica&show_icons=true&theme=radical&bg_color=151515&title_color=E94560&text_color=ffffff&v=1" height="150" alt="stats" />
   
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Urasica&layout=compact&theme=radical&bg_color=151515&title_color=E94560&text_color=ffffff" height="150" alt="languages" />
-</div>
-
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Urasica&layout=compact&theme=radical&bg_color=151515&title_color=E94560&text_color=ffffff&v=1" height="150" alt="languages" />
 </div>
