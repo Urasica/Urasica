@@ -30,16 +30,15 @@
 
 ## 주요 프로젝트
 
-### [CCIM](https://github.com/Urasica/CCIM) (Coding-agent Context & Integrity Middleware)
-**`Solo Project`** | **`2026.04 ~ 2026.05`** 코딩 에이전트와 LLM API 사이에서 반복되는 `Read`/`ToolResult`를 압축하고, 원문 복구와 수정 안전성 및 사용량을 관리하는 로컬 미들웨어 게이트웨이입니다.
+### Code Crash Arena (실시간 1:1 알고리즘 대결 서비스)
+**`Solo Project`** | **`2025.11 ~ 2025.12`** Docker 기반의 독립된 코드 실행 환경과 Redis를 활용한 실시간 매칭 시스템을 구축했습니다.
 
-![CCIM 비교 이미지](./images/ccim.png)
+![CodeCrashArena_아키텍처](./images/CodeCreashArena.png)
 
-* **Key Tech**: Python, FastAPI, Redis, PostgreSQL, Docker, tree-sitter
-    * **AST 기반 컨텍스트 압축**: Python·Java·C#의 함수/메서드 본문을 압축하되 시그니처와 호출 관계 등의 핵심 사실을 보존하고, 현재 턴에서 읽은 대형 파일도 즉시 압축하도록 구현
-    * **가역적 원문 복구와 Write Guard**: 압축 원문을 Redis에 저장하고 `retrieve_original` 도구로 복구하며, 원문을 확인하지 않은 `Edit`·`MultiEdit`·`Write`는 차단해 수정 안정성 확보
-    * **관측성과 운영 도구**: Admin UI와 PostgreSQL Telemetry를 통해 요청별 원본/전송 토큰, 절감량, 지연 시간, 압축·복구·차단 사유를 비교하고 진단하도록 구성
-    * **실사용 A/B 검증**: 동일한 9개 요청 시나리오에서 품질 회귀 검사를 통과하면서 전송 입력 토큰을 **71,939개(21.7%) 절감**했으며, 증가한 평균 지연 시간은 별도 지표로 추적
+* **Key Tech**: Java 17, Spring Boot, WebSocket, Redis, Docker
+    * **Race Condition 해결**: DB 기반 매칭의 병목 현상을 해결하기 위해 Redis ZSET(Sorted Set)과 Atomic Operation으로 동시성 이슈 없는 논블로킹 매칭 큐 구현
+    * **안전한 코드 실행**: 사용자 코드가 서버에 영향을 주지 않도록 **Docker Container** 격리 환경에서 컴파일 및 실행되도록 파이프라인 구축
+    * **좀비 세션 관리**: 네트워크 불안정 시 세션 유실 문제를 방지하기 위해 **Redis Scope(Lobby/Game)** 분리 전략 적용 및 자동 기권 처리 로직 구현
 
 <br>
 
@@ -55,28 +54,16 @@
 
 <br>
 
-### Code Crash Arena (실시간 1:1 알고리즘 대결 서비스)
-**`Solo Project`** | **`2025.11 ~ 2025.12`** Docker 기반의 독립된 코드 실행 환경과 Redis를 활용한 실시간 매칭 시스템을 구축했습니다.
+### [CCIM](https://github.com/Urasica/CCIM) (Coding-agent Context & Integrity Middleware)
+**`Solo Project`** | **`2026.04 ~ 2026.05`** 코딩 에이전트와 LLM API 사이에서 반복되는 `Read`/`ToolResult`를 압축하고, 원문 복구와 수정 안전성 및 사용량을 관리하는 로컬 미들웨어 게이트웨이입니다.
 
-![CodeCrashArena_아키텍처](./images/CodeCreashArena.png)
+![CCIM 비교 이미지](./images/ccim.png)
 
-* **Key Tech**: Java 17, Spring Boot, WebSocket, Redis, Docker
-    * **Race Condition 해결**: DB 기반 매칭의 병목 현상을 해결하기 위해 Redis ZSET(Sorted Set)과 Atomic Operation으로 동시성 이슈 없는 논블로킹 매칭 큐 구현
-    * **안전한 코드 실행**: 사용자 코드가 서버에 영향을 주지 않도록 **Docker Container** 격리 환경에서 컴파일 및 실행되도록 파이프라인 구축
-    * **좀비 세션 관리**: 네트워크 불안정 시 세션 유실 문제를 방지하기 위해 **Redis Scope(Lobby/Game)** 분리 전략 적용 및 자동 기권 처리 로직 구현
-
-<br>
-
-### 한컷여행 (여행 경로 추천 및 공유 서비스)
-**`팀장 (3인)`** | **`2025.07 ~ 2025.09`** 한국관광공사 Open API를 활용하여 맞춤형 여행 경로를 생성하고 공유하는 플랫폼입니다.
-
-![사진_한컷여행_메인화면_이미지](./images/OneCutTrip.png)
-
-* **Key Tech**: Spring Boot, JPA, MariaDB, AWS (EC2/RDS), Docker
-* **My Contribution**:
-    * **데이터 정규화**: API 별로 상이한 비정형 필드 구조를 분석하여 확장 가능한 통합 데이터 모델링 및 정규화 수행
-    * **데이터 매칭 정확도 향상**: 관광지 식별 코드가 API마다 다른 문제를 해결하기 위해, 명칭 기반 1차 매칭 후 **위/경도 좌표 거리 알고리즘**을 적용한 검증 로직 구현
-    * **인프라 구축**: AWS 환경에서 Docker 컨테이너 기반으로 배포 파이프라인 구축 및 HTTPS(Route53) 적용
+* **Key Tech**: Python, FastAPI, Redis, PostgreSQL, Docker, tree-sitter
+    * **AST 기반 컨텍스트 압축**: Python·Java·C#의 함수/메서드 본문을 압축하되 시그니처와 호출 관계 등의 핵심 사실을 보존하고, 현재 턴에서 읽은 대형 파일도 즉시 압축하도록 구현
+    * **가역적 원문 복구와 Write Guard**: 압축 원문을 Redis에 저장하고 `retrieve_original` 도구로 복구하며, 원문을 확인하지 않은 `Edit`·`MultiEdit`·`Write`는 차단해 수정 안정성 확보
+    * **관측성과 운영 도구**: Admin UI와 PostgreSQL Telemetry를 통해 요청별 원본/전송 토큰, 절감량, 지연 시간, 압축·복구·차단 사유를 비교하고 진단하도록 구성
+    * **실사용 A/B 검증**: 동일한 9개 요청 시나리오에서 품질 회귀 검사를 통과하면서 전송 입력 토큰을 **71,939개(21.7%) 절감**했으며, 증가한 평균 지연 시간은 별도 지표로 추적
 
 <br>
 
@@ -90,5 +77,18 @@
     * **조회 성능 최적화**: RDB(회원/거래내역)와 **Redis(실시간 시세)**로 데이터 저장소를 분리하는 **Read-Through/Write-Back** 전략 설계로 병목 현상 해소
     * **API 과부하 방지**: 증권사 API의 Rate Limit 제한(초당 20회 미만 등)을 준수하기 위해 `synchronized` 블록과 **요청 큐(Queue)**를 활용한 재요청 로직 구현
     * **AI 챗봇 파이프라인**: LLM이 JSON 포맷으로 의도(Intent)를 반환하도록 프롬프트 엔지니어링 수행, 내부 API와 연동하여 실시간 주가 정보를 답변하도록 구현
+
+<br>
+
+### 한컷여행 (여행 경로 추천 및 공유 서비스)
+**`팀장 (3인)`** | **`2025.07 ~ 2025.09`** 한국관광공사 Open API를 활용하여 맞춤형 여행 경로를 생성하고 공유하는 플랫폼입니다.
+
+![사진_한컷여행_메인화면_이미지](./images/OneCutTrip.png)
+
+* **Key Tech**: Spring Boot, JPA, MariaDB, AWS (EC2/RDS), Docker
+* **My Contribution**:
+    * **데이터 정규화**: API 별로 상이한 비정형 필드 구조를 분석하여 확장 가능한 통합 데이터 모델링 및 정규화 수행
+    * **데이터 매칭 정확도 향상**: 관광지 식별 코드가 API마다 다른 문제를 해결하기 위해, 명칭 기반 1차 매칭 후 **위/경도 좌표 거리 알고리즘**을 적용한 검증 로직 구현
+    * **인프라 구축**: AWS 환경에서 Docker 컨테이너 기반으로 배포 파이프라인 구축 및 HTTPS(Route53) 적용
 
 ---
