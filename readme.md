@@ -43,6 +43,18 @@
 
 <br>
 
+### [우리집 보수 알림이](https://github.com/Urasica/house-repair-Notification) (LH 임대주택 보수 안내)
+**`Solo Project`** | **`2026.10 ~ 2026.11`** 입주민이 설문이나 챗봇으로 집 안의 증상을 설명하고, 관련 기준과 관리사무소에 전할 내용을 확인할 수 있는 서비스입니다.
+
+![우리집 보수 알림이 PC 메인 화면](https://raw.githubusercontent.com/Urasica/house-repair-Notification/07b1098bda2c12bfecf589d5d306909072a74451/docs/images/desktop-home.png)
+
+* **Key Tech** · Python, FastAPI, PostgreSQL, pgvector, React, Docker, Jenkins, Prometheus, Grafana
+    * **법령 근거와 보수 판단의 분리** — 검토한 조문·별표를 pgvector로 검색해 관련 기준을 출처와 함께 설명합니다. 실제 보수 처리에 적용할 근거가 부족하면 담당 기관에 문의할 내용을 정리합니다.
+    * **상담 기록 접근 제어** — 비회원 설문과 회원 챗봇의 세션을 분리하고, 계정 소유권을 확인한 이전 설문 중 사용자가 선택한 것만 대화에 연결하도록 구현했습니다.
+    * **응답 장애와 복구 검증** — 근거 부족과 검색·연결 실패를 구분하고 Prometheus·Grafana로 응답 상태를 확인하도록 구성했습니다. Jenkins 파이프라인의 실행 스크립트로 격리 Docker 환경에서 DB 장애 복구와 암호화 백업 복원을 확인했습니다.
+
+<br>
+
 ### Code Crash Arena (실시간 1:1 알고리즘 대결 서비스)
 **`Solo Project`** | **`2025.11 ~ 2025.12`** Docker 기반의 독립된 코드 실행 환경과 Redis를 활용한 실시간 매칭 시스템을 구축했습니다.
 
