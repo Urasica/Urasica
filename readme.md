@@ -49,9 +49,9 @@ Java 17, Spring Boot, WebSocket, Redis, Docker
 <br>
 
 ### [우리집 보수 알림이](https://github.com/Urasica/house-repair-Notification) (LH 임대주택 보수 안내)
-**개인 프로젝트** (2026.10–2026.11)
+**3인 팀 프로젝트, 개발 담당** (2026.10–2026.11)
 
-입주민이 설문이나 챗봇에 집 안의 증상을 입력하면 관련 기준과 관리사무소에 전할 내용을 확인할 수 있습니다.
+입주민이 설문이나 챗봇에 집 안의 증상을 입력하면 관련 기준과 관리사무소에 전할 내용을 확인할 수 있습니다. 두 팀원은 서비스 기획을 맡고 검증 아이디어를 제안했습니다.
 
 ![우리집 보수 알림이 PC 메인 화면](https://raw.githubusercontent.com/Urasica/house-repair-Notification/07b1098bda2c12bfecf589d5d306909072a74451/docs/images/desktop-home.png)
 
